@@ -2,6 +2,9 @@
 
 A JavaScript project that demonstrates the use of geolocation with OpenLayers, Vite, and TailwindCSS.
 
+![alt text](https://github.com/aton-py/where-am-i/blob/master/public/screenshot.png)
+
+
 ## Features
 - Utilizes the geolocation feature to determine the user's current location
 - Implements OpenLayers, an open-source JavaScript library, for mapping and location data visualization
