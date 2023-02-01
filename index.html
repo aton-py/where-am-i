@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Where am I?</title>
+  <link rel="stylesheet" href="node_modules/ol/ol.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="grid grid-cols-2 font-mono">
+    <div class="flex flex-col justify-between">
+      <div class="overflow-hidden bg-white sm:rounded-lg">
+        <div id="info" style="display: none;"></div>
+
+        <div class="px-4 py-5 sm:px-6">
+          <h3 class="text-6xl text-gray-900">Where am I?</h3>
+          <label for="track">
+            Find me now
+            <input id="track" type="checkbox" />
+          </label>
+        </div>
+        <div class="border-t border-gray-200">
+          <dl>
+            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt class="text-sm font-medium text-gray-500">Position Accuracy</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><code id="accuracy"></code></dd>
+            </div>
+            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt class="text-sm font-medium text-gray-500">Altitude</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><code id="altitude"></code></dd>
+            </div>
+            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt class="text-sm font-medium text-gray-500">Altitude Accuracy</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><code id="altitudeAccuracy"></code></dd>
+            </div>
+            <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt class="text-sm font-medium text-gray-500">Heading</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><code id="heading"></code></dd>
+            </div>
+            <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+              <dt class="text-sm font-medium text-gray-500">Speed</dt>
+              <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><code id="speed"></code></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="bg-red-400 grid place-items-center">
+        This website does not collect your browsing data.
+      </div>
+    </div>
+
+    <div id="map" class="h-screen"></div>
+  </div>
+  <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
+  <script src="https://unpkg.com/elm-pep@1.0.6/dist/elm-pep.js"></script>
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
